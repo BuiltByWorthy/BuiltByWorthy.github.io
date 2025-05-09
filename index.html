@@ -8,6 +8,7 @@
   <link rel="icon" href="logo.png" type="image/png"> <!-- Favicon added -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="scripts/toggleMenu.js" defer></script>
   <style>
     :root {
       --pale-pink: #f9e4f0;
@@ -20,7 +21,7 @@
 </head>
 
 <body class="font-[\'DM Sans\'] bg-white text-[#0f0f11] pt-16">
-  <nav class="fixed w-full top-0 left-0 bg-white shadow-md px-8 py-4 flex justify-between items-center z-50">
+<!--   <nav class="fixed w-full top-0 left-0 bg-white shadow-md px-8 py-4 flex justify-between items-center z-50">
     <a href="#" class="flex items-center space-x-2">
       <img src="logo.png" alt="BuiltByWorthy Logo" class="h-8 w-8">
       <span class="text-[#5b8df6] font-bold text-xl">BuiltByWorthy</span>
@@ -31,7 +32,38 @@
       <a href="#contact" class="text-[#5b8df6] font-semibold">Contact</a>
       <a href="mailto:your.email@example.com?subject=Discovery%20Call%20Request" class="bg-[#f9e4f0] text-[#0f0f11] px-4 py-2 rounded-full font-semibold hover:bg-[#fce5f1] transition">Free Discovery Call</a>
     </div>
+  </nav> -->
+
+  <nav class="fixed w-full top-0 left-0 bg-white shadow-md px-6 py-4 flex justify-between items-center z-50">
+    <a href="#" class="flex items-center space-x-2">
+      <img src="logo.png" alt="BuiltByWorthy Logo" class="h-8 w-8">
+      <span class="text-[#5b8df6] font-bold text-xl">BuiltByWorthy</span>
+    </a>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-[var(--vibrant-purple)] focus:outline-none">
+        <!-- Hamburger icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="nav-links" class="hidden md:flex space-x-6 text-sm font-semibold">
+      <a href="#services" class="text-[#5b8df6] font-semibold">Services</a>
+      <a href="#portfolio" class="text-[#5b8df6] font-semibold">Portfolio</a>
+      <a href="#contact" class="text-[#5b8df6] font-semibold">Contact</a>
+      <a href="mailto:your.email@example.com?subject=Discovery%20Call%20Request" class="bg-[#f9e4f0] text-[#0f0f11] px-4 py-2 rounded-full font-semibold hover:bg-[#fce5f1] transition">Free Discovery Call</a>
+    </div>
   </nav>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pt-20 pb-4 space-y-4 text-sm font-semibold">
+    <a href="#services" class="text-[#5b8df6] font-semibold">Services</a>
+      <a href="#portfolio" class="text-[#5b8df6] font-semibold">Portfolio</a>
+      <a href="#contact" class="text-[#5b8df6] font-semibold">Contact</a>
+      <a href="mailto:your.email@example.com?subject=Discovery%20Call%20Request" class="bg-[#f9e4f0] text-[#0f0f11] px-4 py-2 rounded-full font-semibold hover:bg-[#fce5f1] transition">Free Discovery Call</a>
+  </div>
+
 
   <section class="text-center bg-gradient-to-br from-[#5b8df6] to-[#7a6ff0] text-white py-32 px-4">
     <h1 class="text-4xl md:text-5xl font-bold mb-4">Site Reliability for Startups</h1>
